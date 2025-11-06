@@ -1,0 +1,247 @@
+/* ================================
+   GENERAL STYLES
+================================ */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 15px;
+  margin: 0;
+  border-radius: 0 0 15px 15px;
+}
+
+/* ================================
+   FORMS
+================================ */
+form {
+  background: #fff;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+form button {
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: linear-gradient(45deg, #dd2476, #ff512f);
+}
+
+/* ================================
+   DASHBOARD TABLE
+================================ */
+table {
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table th {
+  background: #2575fc;
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+table tr:hover {
+  background: #f9f9f9;
+}
+
+table img {
+  border-radius: 8px;
+  max-width: 80px;
+  height: auto;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+.btn {
+  display: inline-block;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 2px;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: #fff;
+}
+
+.btn-danger {
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  color: #fff;
+}
+
+.btn-warning {
+  background: linear-gradient(45deg, #f7971e, #ffd200);
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ================================
+   RESPONSIVE DESIGN (MOBILE)
+================================ */
+@media (max-width: 768px) {
+  /* Make forms full screen */
+  form {
+    width: 90%;
+    margin: 15px auto;
+    padding: 20px;
+  }
+
+  /* Convert table into card style */
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  table thead {
+    display: none; /* Hide headers on mobile */
+  }
+
+  table tr {
+    background: #fff;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+
+  table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  table td:last-child {
+    border-bottom: none;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #2575fc;
+  }
+
+  table img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Buttons stacked */
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    text-align: center;
+  }
+}
+
+
+
+
+
+/* ================================
+   EXTRA FIXES FOR MOBILE
+================================ */
+@media (max-width: 768px) {
+  /* Fix product name visibility */
+  table td strong {
+    white-space: normal !important; /* wrap text */
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    display: block;
+  }
+
+  /* Improve description readability */
+  table td[data-label="Description"] {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  /* Add Product / Edit Product Form */
+  form {
+    width: 90%;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="file"],
+  form textarea {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  form button {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px;
+    border-radius: 10px;
+  }
+}

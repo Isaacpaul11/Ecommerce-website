@@ -1,0 +1,179 @@
+:root {
+  --primary: #6a0dad;
+  --accent: #e0c3fc;
+  --text: #333;
+  --bg: #f9f6ff;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+}
+
+.cart-section {
+  padding: 1rem;
+  text-align: center;
+}
+
+.cart-section h2 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.cart-section h2 span {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent);
+}
+
+.cart-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cart-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 320px;
+  padding: 1rem;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.cart-card:hover {
+  transform: scale(1.02);
+}
+
+.cart-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.cart-details {
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.cart-details h3 {
+  margin: 0.5rem 0;
+  color: var(--primary);
+}
+
+.cart-details p {
+  margin: 0.2rem 0;
+  font-weight: bold;
+}
+
+.cart-details label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.qty-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.qty-input {
+  width: 40px;
+  text-align: center;
+  margin: 0 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+
+.gift-message {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.cart-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 90%;
+  max-width: 300px;
+}
+
+.continue {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.continue:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.checkout {
+  background: var(--primary);
+  color: white;
+}
+
+.checkout:hover {
+  background: #4b0082;
+}
+
+.total {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.empty-cart {
+  font-size: 1rem;
+  color: var(--text);
+  margin-top: 2rem;
+}
